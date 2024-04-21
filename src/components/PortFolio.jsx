@@ -1,75 +1,66 @@
 import React from "react";
-import java from "../../public/java.png";
-import python from "../../public/python.webp";
-import mongoDB from "../../public/mongodb.jpg";
-import express from "../../public/express.png";
-import reactjs from "../../public/reactjs.png";
-import nodejs from "../../public/node.png";
+import qrcode from "../../public/qr_code.png";
+import snake from "../../public/snake.jpg";
+import youtube from "../../public/youtube_logo.png";
+
 function PortFolio() {
   const cardItem = [
     {
       id: 1,
-      logo: mongoDB,
-      name: "MongoDB",
+      logo: youtube,
+      name: "Youtube UI Clone",
+      link: "http://linktoproject1.com",
+      description:
+        "A responsive clone of youtube.com with additional functionality including Speech to Text search.",
     },
     {
       id: 2,
-      logo: express,
-      name: "Express",
+      logo: qrcode,
+      name: "QR Code Generator",
+      link: "http://linktoproject2.com",
+      description:
+        "User can type a text message that will encoded in a QR code and can be scanned by a scanner to see text message",
     },
     {
       id: 3,
-      logo: reactjs,
-      name: "ReactJS",
-    },
-    {
-      id: 4,
-      logo: nodejs,
-      name: "NodeJS",
-    },
-    {
-      id: 5,
-      logo: python,
-      name: "Python",
-    },
-    {
-      id: 6,
-      logo: java,
-      name: "Java",
+      logo: snake,
+      name: "Snake Game",
+      link: "http://linktoproject3.com",
+      description:
+        " A real-time snake game with immersive styling using CSS3 with additional features of highscores and leaderborad",
     },
   ];
+
   return (
     <div
       name="Portfolio"
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10"
     >
       <div>
-        <h1 className="text-3xl font-bold mb-5">PortFolio</h1>
-        <span className=" underline font-semibold">Featured Projects</span>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 my-5">
-          {cardItem.map(({ id, logo, name }) => (
+        <h1 className="text-3xl font-bold mb-5">Portfolio</h1>
+        <span className="underline font-semibold">Featured Projects</span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-5">
+          {cardItem.map(({ id, logo, name, link, description }) => (
             <div
-              className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-110 duration-300"
+              className="flex flex-col md:w-[350px] md:h-[450px] border-[2px] rounded-lg shadow-lg cursor-pointer hover:scale-110 transition-transform duration-300 overflow-hidden"
               key={id}
             >
               <img
                 src={logo}
-                className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
-                alt=""
+                className="w-full h-1/2 object-contain"
+                alt={`${name} project logo`}
               />
-              <div>
-                <div className="px-2 font-bold text-xl mb-2">{name}</div>
-                <p className="px-2 text-gray-700">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </p>
-              </div>
-              <div className=" px-6 py-4 space-x-3 justify-around">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded">
-                  Video
-                </button>
-                <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded">
-                  Source code
-                </button>
+              <div className="flex flex-col items-center justify-start p-4 grow">
+                <h3 className="text-center font-bold text-xl mb-2">{name}</h3>
+                <p className="text-gray-700">{description}</p>
+                <a
+                  href={link}
+                  className="mt-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition-colors duration-200 w-full text-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Link
+                </a>
               </div>
             </div>
           ))}
