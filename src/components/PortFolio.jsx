@@ -9,7 +9,7 @@ function PortFolio() {
       id: 1,
       logo: youtube,
       name: "Youtube UI Clone",
-      link: "http://linktoproject1.com",
+      link: "https://sumit-dev-youtube-clone.netlify.app",
       description:
         "A responsive clone of youtube.com with additional functionality including Speech to Text search.",
     },
@@ -17,7 +17,7 @@ function PortFolio() {
       id: 2,
       logo: qrcode,
       name: "QR Code Generator",
-      link: "http://linktoproject2.com",
+      link: "https://chipper-faloodeh-cf59d7/",
       description:
         "User can type a text message that will encoded in a QR code and can be scanned by a scanner to see text message",
     },
@@ -25,7 +25,7 @@ function PortFolio() {
       id: 3,
       logo: snake,
       name: "Snake Game",
-      link: "http://linktoproject3.com",
+      link: "https://noobiecoder00.github.io/Snake-game/",
       description:
         " A real-time snake game with immersive styling using CSS3 with additional features of highscores and leaderborad",
     },
@@ -57,7 +57,7 @@ function PortFolio() {
                   href={link}
                   className="mt-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition-colors duration-200 w-full text-center"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel=""
                 >
                   Link
                 </a>
