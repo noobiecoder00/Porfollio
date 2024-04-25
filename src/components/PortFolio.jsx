@@ -17,7 +17,7 @@ function PortFolio() {
       id: 2,
       logo: qrcode,
       name: "QR Code Generator",
-      link: "https://chipper-faloodeh-cf59d7/",
+      link: "https://chipper-faloodeh-cf59d7.netlify.app/",
       description:
         "User can type a text message that will encoded in a QR code and can be scanned by a scanner to see text message",
     },
